@@ -1,18 +1,23 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-//TODO: add proptypes and default props
+const Seperator = () => (<span>&nbsp;|&nbsp;</span>)
 
-function Header(props) {
-	return (
-		<div className="header">
-			<div className="container">
-				<h1 className="header__title">{props.title}</h1>
-				{props.subtitle && (
-					<h2 className="header__subtitle">{props.subtitle}</h2>
-				)}
-			</div>
-		</div>
-	);
-}
+const Header = () => (
+	<header>
+		<h1>Expensify</h1>
+		<NavLink to="/" exact={true} activeClassName="is-active">
+			Dashboard
+		</NavLink>
+		<Seperator />
+		<NavLink to="/create" activeClassName="is-active">
+			Create
+		</NavLink>
+		<Seperator />
+		<NavLink to="/help" activeClassName="is-active">
+			Help
+		</NavLink>
+	</header>
+);
 
 export default Header;
