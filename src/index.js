@@ -10,27 +10,6 @@ import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 
 const store = configureStore();
-store.dispatch(
-	addExpense({
-		createdAt: 10000,
-		description: 'Water bill',
-		amount: 100,
-	})
-);
-store.dispatch(
-	addExpense({
-		createdAt: 20000,
-		description: 'Rent bill',
-		amount: 5000,
-	})
-);
-store.dispatch(
-	addExpense({
-		createdAt: 250000,
-		description: 'Gas bill',
-		amount: 50,
-	})
-);
 
 ReactDOM.render(
 	<React.StrictMode>
