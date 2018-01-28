@@ -2,6 +2,7 @@
 
 exports[`should test ExpenseDashboardPage 1`] = `
 <div>
+  <Connect(ExpenseSummary) />
   <Connect(ExpenseListFilter) />
   <Connect(ExpenseList) />
 </div>

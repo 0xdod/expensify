@@ -32,7 +32,7 @@ export class EditExpensePage extends React.Component {
 const mapStateToProps = (state, props) => {
 	return {
 		expense: state.expenses.find(
-			expense => expense.id == props.match.params.id
+			expense => expense.id === props.match.params.id
 		),
 	};
 };
